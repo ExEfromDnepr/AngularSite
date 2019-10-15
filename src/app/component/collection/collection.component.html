@@ -1,0 +1,26 @@
+
+<div class="url-contein">
+  <a class="url-contein__text">Главная</a>
+  <i class="material-icons">
+    arrow_right_alt
+   </i>
+  <a class="url-contein__text">Каталог</a>
+</div>
+  <div class="sort__conteiner">
+    <mat-form-field>
+      <mat-label>Select an option</mat-label>
+      <mat-select [(value)]="selected">
+        <mat-option>None</mat-option>
+        <mat-option value="option1">Сортировка</mat-option>
+        <mat-option value="option2">по убыванию цен</mat-option>
+        <mat-option value="option3">по возрастанию цен</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="categories" >
+    <div class="categories__item" *ngFor="let category of categories">
+        <img class="categories__img" src={{category.urlImg}} />
+        <span class="categories__text">{{category.name}}</span>
+    </div>
+  </div>
+
